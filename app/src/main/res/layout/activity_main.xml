@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="#ffffff">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.01dp"
+        android:background="#FF707070"
+        app:layout_constraintBottom_toTopOf="@id/tabs_rg"/>
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.0879"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/homepage_tab"
+            style="@style/Custom.TabRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/homepage_selector"
+            android:text="首页"
+            android:background="@android:color/transparent"
+            android:textSize="10sp"/>
+
+        <RadioButton
+            android:id="@+id/studio_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/studio_selector"
+            android:text="工作室"
+            android:background="@android:color/transparent"
+            android:textSize="10sp"/>
+
+        <RadioButton
+            android:id="@+id/cart_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/cart_selector"
+            android:text="购物"
+            android:background="@android:color/transparent"
+            android:textSize="10sp"/>
+
+        <RadioButton
+            android:id="@+id/mine_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/mine_selector"
+            android:text="我"
+            android:background="@android:color/transparent"
+            android:textSize="10sp"/>
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

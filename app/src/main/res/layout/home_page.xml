@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HomePage">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        app:tl_indicator_height="4dp"
+        app:tl_indicator_color="#208BB5"
+        app:tl_textSelectColor="@color/black"
+        app:tl_textUnselectColor="#696969"
+        app:tl_textBold="SELECT"
+        app:tl_indicator_width="30dp"
+        app:tl_tab_space_equal="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:background="@drawable/edit_text"
+        android:hint="搜索您感兴趣的物品吧～"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/line1"
+        app:layout_constraintTop_toTopOf="@id/tab"
+        android:paddingLeft="35dp"
+        android:textCursorDrawable="@drawable/edit_curson"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tab"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.06"
+        app:layout_constraintHeight_percent="0.03"
+        android:background="@drawable/search"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toLeftOf="@id/edt_search"
+        app:layout_constraintTop_toTopOf="@id/edt_search"
+        app:layout_constraintBottom_toBottomOf="@id/edt_search"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tab"
+        android:background="#f0f0f0"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.822"
+        app:layout_constraintTop_toBottomOf="@id/tab"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
